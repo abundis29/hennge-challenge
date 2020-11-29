@@ -1,0 +1,140 @@
+body {
+  max-width: 1280px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none;
+}
+.right {
+  float: right;
+}
+
+.input-group-append {
+  background-color: #eee;
+}
+
+.empty_table__row {
+  text-align: center;
+}
+
+.empty_table__row:hover {
+  background-color: white;
+}
+
+.empty_table {
+  position: relative;
+  height: calc(100vh - 230px);
+}
+.empty_table img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+thead tr:nth-child(2) {
+  background: #eee;
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  tbody,
+  th,
+  td,
+  tr {
+    display: inline-table;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  /* thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  } */
+  
+
+  thead tr:nth-child(2) {
+    background: #eee;
+  }
+
+  tr {
+    width: 100%;
+  }
+
+  tr:nth-child(odd) {
+    /* background: #eee; */
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    /* border-bottom: 1px solid #eee; */
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+
+.table td,
+.table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: none;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #eee;
+  border-right: 1px solid #eee;
+  margin: 5px;
+  border-right: 1px solid #d0d4d8;
+  padding-right: 8px;
+  display: table-cell;
+}
+
+.iki {
+  float: right;
+  display: inline-block;
+  position: absolute;
+  right: 27px;
+  top: 11px;
+  bottom: 0;
+}
+.iker {
+  font-size: 30px;
+  display: inline-block;
+  float: left;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+@media (min-width: 576px) {
+  .d-sm-block {
+    display: table-cell !important;
+  }
+}
+
+.custom-control {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    width: 9px;
